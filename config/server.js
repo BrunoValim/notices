@@ -11,27 +11,28 @@ var bodyParser = require('body-parser');
 var expressValidator = require('express-validator');
 
 /* iniciar o objeto do express */
-var app = express();
+var serverExpress = express();
 
 /* setar as variáveis 'view engine' e 'views' do express */
-app.set('view engine', 'ejs');
-app.set('views', './app/views');
+serverExpress.set('view engine', 'ejs');
+serverExpress.set('views', './app/views');
 
 /* configurar o middleware express.static */
-app.use(express.static('./app/public'));
+serverExpress.use(express.static('./app/public'));
 
 /* configurar o middleware body-parser */
-app.use(bodyParser.urlencoded({extended: true}));
+serverExpress.use(bodyParser.urlencoded({extended: true}));
 
 /* configurar o middleware express-validator */
-app.use(expressValidator());
+serverExpress.use(expressValidator());
 
 /* efetua o autoload das rotas, dos models e dos controllers para o objeto app */
 consign()
 	.include('app/routes')
 	.then('app/models')
 	.then('app/controllers')
-	.into(app);
+	.then('config/dbConnection.js')
+	.into(serverExpress);
 
 /* exportar o objeto app */
-module.exports = app;
+module.exports = serverExpress;

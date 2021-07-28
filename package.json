@@ -5,14 +5,17 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Jorge",
+  "author": "Bruno Valim",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
     "consign": "^0.1.6",
     "ejs": "^2.7.4",
     "express": "^4.17.1",
-    "express-validator": "^2.21.0"
+    "express-validator": "^2.21.0",
+    "mongodb": "^2.2.10",
+    "mongodb-core": "^3.2.7",
+    "nodemon": "^2.0.12"
   },
   "devDependencies": {},
   "description": "notices portal",
