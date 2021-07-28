@@ -1,5 +1,5 @@
 {
-  "name": "mockserver",
+  "name": "notices",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -15,5 +15,18 @@
     "express-validator": "^2.21.0"
   },
   "devDependencies": {},
-  "description": ""
+  "description": "notices portal",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrunoValim/notices.git"
+  },
+  "keywords": [
+    "notices",
+    "portal",
+    "study"
+  ],
+  "bugs": {
+    "url": "https://github.com/BrunoValim/notices/issues"
+  },
+  "homepage": "https://github.com/BrunoValim/notices#readme"
 }
